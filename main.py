@@ -10,9 +10,9 @@ import time
 import requests
 
 # 开启根据地区天气情况降低步数（默认关闭）
-open_get_weather = sys.argv[3]
+open_get_weather = TRUE 
 # 设置获取天气的地区（上面开启后必填）如：area = "宁波"
-area = sys.argv[4]
+area = "郑州"
 
 # 以下如果看不懂直接默认就行只需改上面
 
@@ -76,8 +76,8 @@ def getBeijinTime():
         hour = find.group(1)
         min_ratio = max(math.ceil((int(hour) / 3) - 1), 0)
         max_ratio = math.ceil(int(hour) / 3)
-        min_1 = 1950 * min_ratio
-        max_1 = 1950 * max_ratio
+        min_1 = 1550 * min_ratio
+        max_1 = 1550 * max_ratio
         min_1 = int(K * min_1)
         max_1 = int(K * max_1)
     else:
